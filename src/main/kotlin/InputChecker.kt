@@ -1,16 +1,12 @@
-import java.util.*
-
-class Input() {
+class InputChecker {
 
     companion object {
-        val scanner: Scanner = Scanner(System.`in`)
-
         fun checkInt(input: String): Boolean{
-            if (input.toIntOrNull() == null) {
+            return if (input.toIntOrNull() == null) {
                 println("Некорректная команда. Пожалуйста, введите число")
-                return false
+                 false
             } else {
-                return true
+                true
             }
         }
     }

@@ -1,4 +1,5 @@
 fun main(args: Array<String>) {
-    val menu = Menu()
-    menu.startMenuPrint()
+    val contentCreatorAndChooiser = ContentCreatorAndChooiser()
+    val menu = Menu(contentCreatorAndChooiser)
+    menu.archiveMenuPrint()
 }
