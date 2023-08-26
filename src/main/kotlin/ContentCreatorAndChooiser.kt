@@ -11,13 +11,13 @@ class ContentCreatorAndChooiser {
             "введите название нового архива\n" +
                     "---"
         )
-        val name = Scanner(System.`in`).nextLine()
-        if (name.isEmpty()) {
+        var name = Scanner(System.`in`).nextLine()
+        while (name.isEmpty()) {
             println(
                 "название архива не может быть пустым\n" +
                         "---"
             )
-            createArchive()
+            name = Scanner(System.`in`).nextLine()
         }
         println(
             "архив $name успешно создан\n" +
@@ -34,8 +34,8 @@ class ContentCreatorAndChooiser {
             )
             for (archive in archives) {
                 println("${archives.indexOf(archive)}. ${archive.title}")
-                println("${archives.size}. назад")
             }
+            println("${archives.size}. назад")
 
 
             val input = Scanner(System.`in`).nextLine()
