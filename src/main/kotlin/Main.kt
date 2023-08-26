@@ -1,3 +1,5 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val contentCreatorAndChooiser = ContentCreatorAndChooiser()
+    val menu = Menu(contentCreatorAndChooiser)
+    menu.archiveMenuPrint()
 }
